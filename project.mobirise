@@ -1,0 +1,125 @@
+{
+  "settings": {
+    "name": "Site 2024-06-15 12:57",
+    "currentPage": "index.html",
+    "theme": {
+      "name": "startm5",
+      "title": "StartM5",
+      "titlePreset": "StartM5",
+      "styling": {
+        "primaryColor": "#9fe870",
+        "secondaryColor": "#ffd7ef",
+        "successColor": "#3a341c",
+        "infoColor": "#320707",
+        "warningColor": "#a0e2e1",
+        "dangerColor": "#ffea64",
+        "mainFont": "Inter Tight",
+        "display1Font": "Inter Tight",
+        "display1Size": 5,
+        "display2Font": "Inter Tight",
+        "display2Size": 4,
+        "display5Font": "Inter Tight",
+        "display5Size": 2,
+        "display7Font": "Inter Tight",
+        "display7Size": 1.4,
+        "display4Font": "Inter Tight",
+        "display4Size": 1.4,
+        "isRoundedImages": true,
+        "isRoundedButtons": true,
+        "isLargeButtons": true,
+        "isGhostButtonBorder": true,
+        "underlinedLinks": false,
+        "isAnimatedOnScroll": false,
+        "isScrollToTopButton": false
+      }
+    },
+    "path": "@PROJECT_PATH@",
+    "versionFirst": "5.9.18",
+    "siteFonts": [
+      {
+        "css": "'Inter Tight', sans-serif",
+        "name": "Inter Tight",
+        "url": "https://fonts.googleapis.com/css?family=Inter+Tight:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i"
+      }
+    ],
+    "uniqCompNum": 6,
+    "versionPublish": "5.9.18",
+    "imageResize": true,
+    "screenshot": "screenshot.png"
+  },
+  "pages": {
+    "index.html": {
+      "settings": {
+        "main": true,
+        "title": "iZUMi finance® | Home Official Site",
+        "meta_descr": "iZUMi.finance offers One-Stop Liquidity as a Service (LaaS) on Ethereum, Polygon and Arbitrum. It features a next-generation DEX, a non-custodial liquidity mining solution.",
+        "header_custom": "",
+        "footer_custom": "",
+        "html_before": ""
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 1rem)",
+              "padding-bottom": "(@paddingBottom * 1rem)"
+            },
+            "& when (@bg-type = \"color\")": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = \"image\")": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-fallback-image.disabled": {
+              "display": "none"
+            },
+            ".mbr-fallback-image": {
+              "display": "block",
+              "background-size": "cover",
+              "background-position": "center center",
+              "width": "100%",
+              "height": "100%",
+              "position": "absolute",
+              "top": "0",
+              "& when (@bg-type = 'video')": {
+                "background-image": "url(@fallBackImage)"
+              }
+            },
+            ".card-content-text": {
+              "@media (max-width: 767px)": {
+                "padding": "0 1.5rem 1.5rem 1.5rem"
+              },
+              "@media (min-width: 768px)": {
+                "padding": "0 2.25rem 2.25rem 2.25rem"
+              },
+              "@media (min-width: 992px)": {
+                "padding": "1rem 4rem 4rem 4rem"
+              }
+            },
+            ".card-wrapper": {
+              "background": "@wrapBgColor"
+            },
+            ".mbr-text, .mbr-section-btn": {
+              "color": "#000000",
+              "text-align": "left"
+            },
+            ".card-title, .card-box": {
+              "text-align": "left",
+              "color": "#000000"
+            }
+          },
+          "_name": "article08",
+          "_sourceTheme": "startm5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"article8\" group=\"Article\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{\n    'mbr-fullscreen': fullScreen,\n    'mbr-parallax-background': bg.parallax}\">\n  <mbr-parameters>\n    <header>Size</header>\n    <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n    <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n    <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n    <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n    <input type=\"range\" inline title=\"Content Width\" name=\"contentWidth\" min=\"8\" max=\"12\" step=\"1\" value=\"10\">\n    <header>Show/Hide</header>\n    <input type=\"checkbox\" title=\"Image\" name=\"showImage\" checked>\n    <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n    <input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\" checked>\n    <input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n    <input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\">\n    <input type=\"color\" title=\"Wrap Bg\" name=\"wrapBgColor\" value=\"#ffffff\">\n    <header>Background</header>\n    <fieldset type=\"background\" name=\"bg\" parallax>\n      <input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\" parallax>\n      <input type=\"color\" title=\"Color\" value=\"#edefeb\" selected>\n      <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n    </fieldset>\n    <header condition=\"bg.type === 'video'\">Fallback Image</header>\n    <input type=\"image\" title=\"Fallback Image\" value=\"../_images/background1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n    <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n    <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n    <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.3\" condition=\"overlay && bg.type !== 'color'\">\n  </mbr-parameters>\n\n  <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n  <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\"></div>\n  <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n    <div class=\"row justify-content-center\">\n      <div class=\"card col-md-12 col-lg-{{contentWidth}}\">\n        <div class=\"card-wrapper\">\n          <div class=\"image-wrapper d-flex justify-content-center mb-4\">\n            <img mbr-if=\"showImage\" src=\"@PROJECT_PATH@/assets/images/izumi-finance-1599x900.jpg\" alt=\"izumi finance\">\n          </div>\n          <div class=\"card-content-text\">\n            <h3 class=\"card-title mbr-fonts-style mbr-white mt-3 mb-4\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".card-title, .card-box\"><b>iZUMi finance® | Home Official Site</b></h3>\n          <div class=\"row card-box align-left\">\n            <div class=\"item features-without-image col-12\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style mb-3\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-2\"><b>izumi finance – A Beginner’s Guide</b></h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\"><a href=\"https://izumiifinance.github.io/\" class=\"text-primary\">iZUMi Finance</a> is a multi-chain DeFi protocol providing One-Stop Liquidity as a Service (LaaS). Its philosophy is that every token deserves better on-chain liquidity in an efficient and lasting way. As our name “iZUMi” in Japanese signifies, our ultimate goal is to help every partner and token to enjoy on-chain liquidity like spring water, continuous and long-lasting for centuries.\n<br>\n<br>iZUMi has debuted LiquidBox, iZiSwap, and iUSD three on-chain liquidity products. LiquidBox provides Programmable Liquidity as a Service (LaaS) firstly on Ethereum with Uniswap V3. With the deployment of Uniswap V3 in other Ethereum Layer 2 ecosystems, LiquidBox was also successfully deployed on Arbitrum &amp; Polygon. iZUMi Finance then launched iZiswap on BNB Chain with the innovative Discretized-Liquidity-AMM(DL-AMM) model, which was upgraded from Uniswap V3's concentrated liquidity model to implement an AMM mechanism that supports discrete liquidity on every price tick, providing DEX users with a CEX-like trading experience to place limit orders in a non-custodial orderbook way. iZUMi has also successfully issued iZUMi Bond USD (iUSD) and iZUMi Bond, and supported Bond Farming which brings stable fixed income to on-chain investors, providing a high yield level fixed income investment product for users and combining with the TradFi product model of convertible bonds to provide iZUMi Bond investors the Option which can convert to iZi token.\n<br>\n<br>iZUMi will continue to expand the multi-chain ecology and eventually support cross-chain liquidity trading mechanisms, bring systematic liquidity service to the multi-chain ecosystem, and eventually become a one-stop liquidity service platform with super high capital efficiency in the DeFi industry.<br><br><b>LiquidBox</b><br><br>iZUMi’s LiquidBox enhances incentive efficiency, enabling protocols to distribute incentive rewards in certain price ranges. LiquidBox will help liquidity providers earn additional liquidity mining rewards provided by related protocols as well as DEX trading fees. On the other side, LiquidBox solves “pool 2 dilemmas” problems by providing structured-incentive and auto-rebased modules, which could attract more liquidity with a low emission rate for protocols while enabling non-impermanent loss liquidity mining for liquidity providers. This innovative Liquidity Mining mechanism helps protocols attract liquidity in an efficient and lasting way.<b><br></b><br></p>\n              </div>\n            </div>\n            <div class=\"item features-without-image col-12\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\"><b>Connect your wallet Izumi Finance</b><b><br></b></h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">How to connect your wallet\n<br>\n<br>1) Go to iZUMi Finance’s website, click “Connect Wallet” in the upper right corner.\n<br>\n<br>2) Choose your wallet type and then you can experience iZUMi Finance \n<br><br></p>\n              </div>\n            </div>\n            <div class=\"item features-without-image col-12\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\"><b>iZUMi DAO</b></h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">iZUMi Finance operates with a decentralized autonomous organization (DAO) model, empowering the community to participate in governance and decision-making processes. The iZUMi DAO allows token holders to propose and vote on various initiatives, such as protocol upgrades, liquidity incentives, and new product launches. This decentralized governance structure ensures that the platform evolves in a way that aligns with the interests of its community members.<br><br></p>\n              </div>\n            </div><div class=\"item features-without-image col-12\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\"><b>Unique Features Izumi Finance</b></h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">The WienerAI presale is going on now, enabling anyone to buy $WAI at a discounted price of just $0.000711. However, the next price increase is just 36 hours away, so there’s no time to wait.<br><b><br>Concentrated Liquidity<br></b>The concept of concentrated liquidity is central to iZUMi Finance's offerings. Unlike traditional liquidity pools that spread assets across a broad price range, iZUMi Finance allows liquidity providers to concentrate their assets within specific price bands. This approach maximizes capital efficiency, as assets are utilized where they are most needed, leading to better returns for liquidity providers and improved trading conditions for users.<br><br><b>Dynamic Fee Structure<br></b>iZUMi Finance employs a dynamic fee structure that adjusts based on market conditions and trading volume. This flexible approach ensures that fees remain competitive, attracting more users to the platform. By aligning fees with market activity, iZUMi Finance can provide a more sustainable and efficient trading environment.<br><br><b>Incentive Programs<br></b>To encourage participation and foster growth, iZUMi Finance offers various incentive programs for liquidity providers and traders. These incentives can include token rewards, fee rebates, and other benefits designed to attract and retain users. By providing attractive incentives, iZUMi Finance can build a robust and active user base, contributing to the platform's long-term success.<br><br><b>Impact on the DeFi Ecosystem<br></b>Improved Capital Efficiency<br>iZUMi Finance's approach to liquidity management significantly improves capital efficiency within the DeFi ecosystem. By concentrating liquidity in active trading ranges, the platform reduces the amount of idle capital and ensures that assets are used more effectively. This not only benefits liquidity providers through higher returns but also enhances the overall efficiency of the DeFi market.<br><br><b>Enhanced User Experience<br></b>The combination of concentrated liquidity and a dynamic fee structure results in a superior trading experience for users. Traders benefit from reduced slippage and better price execution, making iZUMi Finance an attractive choice for both retail and institutional participants. The platform's user-friendly interface and diverse range of supported tokens further enhance its appeal.<br><br><b>Decentralized Governance<br></b>The iZUMi DAO model empowers the community to take an active role in shaping the platform's future. By allowing token holders to participate in governance, iZUMi Finance ensures that its development aligns with the needs and preferences of its users. This decentralized approach fosters transparency, accountability, and community engagement, setting a standard for other DeFi projects to follow.<br><br><b>Follow iZUMi Finance Official Channels:</b><br><b>\n<br></b>a. Website:  https://izumi.finance/home<br>b. Github：https://github.com/IzumiFinance/<br>c. Twitter：https://twitter.com/izumi_Finance<br>d. Telegram：(EN)https://t.me/izumifinance; (CN)https://t.me/iZUMi_Finance_CN<br>e. Discord：https://discord.gg/izumifinance<br>f. Medium：https://izumi-finance.medium.com/<br><br><b>Conclusion</b><br>iZUMi Finance stands out in the DeFi landscape with its innovative approach to liquidity management and its commitment to enhancing user experience. Through products like LiquidBox and iZiSwap, the platform addresses key challenges in the DeFi space, such as liquidity fragmentation and inefficiency. The use of concentrated liquidity, dynamic fees, and robust incentive programs positions iZUMi Finance as a leader in the decentralized finance sector. As the platform continues to evolve, its impact on the broader DeFi ecosystem is expected to grow, driving greater efficiency, participation, and innovation in the blockchain space.<br><br></p>\n              </div>\n            </div>\n\n            <div mbr-buttons mbr-theme-style=\"display-7\" class=\"mbr-section-btn mt-3\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\">\n              <a class=\"btn btn-primary\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">Start Now</a>\n            </div>\n          </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</section>",
+          "_cid": "ufKKpn0XjL",
+          "_anchor": "article08-5",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        }
+      ]
+    }
+  }
+}
